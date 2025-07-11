@@ -1,11 +1,13 @@
-import React from 'react'
+// Components
+import HeroSection from "@/components/sections/public/home/HeroSection"
+import BeritaSection from "@/components/sections/public/home/BeritaSection"
+
 
 const Home = () => {
   return (
     <>
-    <div className=''>
-
-    </div>
+      <HeroSection />
+      <BeritaSection />
     </>
   )
 }
