@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react"
 import { supabase } from "@/supabaseClient"
 
-const useBeritaData = () => {
+const BeritaData = () => {
   const [berita, setBerita] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
@@ -14,8 +14,6 @@ const useBeritaData = () => {
         .from("berita")
         .select("id, title, description, image_cover, published_at")
         .order("published_at", { ascending: false })
-        .limit(3)
-
       if (error) throw error
       setBerita(data)
     } catch (err) {
@@ -32,4 +30,4 @@ const useBeritaData = () => {
   return { berita, loading, error }
 }
 
-export default useBeritaData
+export default BeritaData

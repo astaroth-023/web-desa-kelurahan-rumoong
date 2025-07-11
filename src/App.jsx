@@ -6,7 +6,6 @@ import Routing from '@/routing/index'
 const App = () => {
   return (
     <>
-
     <main>
     <Navbar/>
     <Routing/>

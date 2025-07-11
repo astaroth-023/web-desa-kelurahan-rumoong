@@ -13,7 +13,7 @@ const BeritaSection = () => {
   return (
     <>
       <section className="min-h-screen py-32">
-        <h2 className="text-center font-bold text-3xl">Berita Sekarang</h2>
+        <h2 className="text-center font-bold text-3xl">Berita Terbaru</h2>
         <div className="flex justify-center mt-16">
           <div className="grid grid-cols-3 items-center gap-8">
             {loading && (

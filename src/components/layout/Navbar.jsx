@@ -20,7 +20,7 @@ const Navbar = () => {
                     </Link>
                     <div className="flex flex-row items-center gap-4">
                         <li>
-                            <Link className="transition-all duration-200 hover:!text-yellow-300">Berita</Link>
+                            <Link className="transition-all duration-200 hover:!text-yellow-300" to={'/berita'}>Berita</Link>
                         </li>
                         <li>
                             <Link className="transition-all duration-200 hover:!text-yellow-300" to={'/profil-desa'}>Profil Desa</Link>
@@ -28,7 +28,7 @@ const Navbar = () => {
                         <li>
                             <Link className="transition-all duration-200 hover:!text-yellow-300" to={'/'}>Wisata</Link>
                         </li>
-                        <li>
+                        <li className={`${location.pathname === '/login' ? 'hidden' : ''} ${location.pathname.startsWith('/dashboard') ? 'hidden' : ''}`}>
                             <Link className="border border-white py-2 px-6 rounded-md transition-all duration-200 hover:bg-white hover:!text-black" to={'/login'}>Login</Link>
                         </li>
                     </div>
