@@ -1,3 +1,5 @@
+// Hooks
+
 import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import useLoginAuth from "@/components/hooks/public/login/LoginAuth"
@@ -9,7 +11,6 @@ const LoginForm = () => {
     const [password, setPassword] = useState("")
     const navigate = useNavigate()
 
-    // Auto-login if already authenticated
     useEffect(() => {
         const checkSession = async () => {
             const { data } = await supabase.auth.getSession()
@@ -29,7 +30,7 @@ const LoginForm = () => {
     }
 
     return (
-        <div className="max-w-md w-full bg-white shadow-md rounded-lg p-8">
+        <div className="max-w-md w-full bg-white shadow-md rounded-lg h-fit p-8">
             <h2 className="text-2xl font-bold mb-6 text-gray-800 text-center">Login</h2>
             <form className="space-y-5" onSubmit={handleSubmit}>
                 <div>
@@ -42,7 +43,7 @@ const LoginForm = () => {
                         value={email}
                         onChange={e => setEmail(e.target.value)}
                         className="mt-1 w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
-                        placeholder="you@example.com"
+                        placeholder="Email"
                         required
                     />
                 </div>
@@ -57,7 +58,7 @@ const LoginForm = () => {
                         value={password}
                         onChange={e => setPassword(e.target.value)}
                         className="mt-1 w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
-                        placeholder="Password"
+                        placeholder="Kata sandi"
                         required
                     />
                 </div>

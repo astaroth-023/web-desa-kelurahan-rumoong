@@ -5,7 +5,7 @@ const Footer = () => {
   const location = useLocation();
   return (
    <>
-   <footer className={`p-8 bg-blue-500 text-white text-center ${location.pathname.startsWith('/dashboard') ? 'hidden' : ''}`}>
+   <footer className={`p-4 xl:p-8 bg-blue-500 text-white text-center xl:text-base text-xs ${location.pathname.startsWith('/dashboard') ? 'hidden' : ''}`}>
     &copy; 2025 | Kelurahan Rumoong Bawah
    </footer>
    </>

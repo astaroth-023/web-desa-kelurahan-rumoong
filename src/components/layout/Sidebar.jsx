@@ -1,13 +1,11 @@
 // Hooks
-import { Link } from "react-router-dom"
-import { useNavigate } from "react-router-dom"
-import { useLocation } from "react-router-dom"
+import { useNavigate, useLocation, Link } from "react-router-dom"
 
 // Icons
 import { FaHome, FaNewspaper } from "react-icons/fa"
-import { FaArrowRightFromBracket, FaUsersLine } from "react-icons/fa6"
+import { FaArrowRightFromBracket, FaUsersLine, FaGear, FaArrowRight } from "react-icons/fa6"
 
-const Sidebar = () => {
+const Sidebar = ({ clickLogout }) => {
     const navigate = useNavigate();
     const location = useLocation();
     return (
@@ -15,25 +13,31 @@ const Sidebar = () => {
             <ul className="px-4 space-y-4">
                 <li className="">
                     <button onClick={() => navigate('/dashboard')} className={`${location.pathname === '/dashboard' ? 'bg-gray-600/70' : ''} py-2 px-4 rounded-md hover:bg-gray-600/70 w-full flex flex-row items-center gap-2`}>
-                        <FaHome/>
+                        <FaHome />
                         Dashboard
                     </button>
                 </li>
                 <li className="">
                     <button onClick={() => navigate('/dashboard/berita')} className={`${location.pathname === '/dashboard/berita' ? 'bg-gray-600/70' : ''} py-2 px-4 rounded-md hover:bg-gray-600/70 w-full flex flex-row items-center gap-2`}>
-                        <FaNewspaper/>
+                        <FaNewspaper />
                         Berita
                     </button>
                 </li>
                 <li className="">
                     <button onClick={() => navigate('/dashboard/data-penduduk')} className={`${location.pathname === '/dashboard/data-penduduk' ? 'bg-gray-600/70' : ''} py-2 px-4 rounded-md hover:bg-gray-600/70 w-full flex flex-row items-center gap-2`}>
-                        <FaUsersLine/>
+                        <FaUsersLine />
                         Data Penduduk
                     </button>
                 </li>
                 <li className="">
-                    <button className="py-2 px-4 rounded-md hover:bg-red-500/70 w-full flex flex-row items-center gap-2">
-                        <FaArrowRightFromBracket/>
+                    <button onClick={() => navigate('/dashboard/pengaturan')} className={`${location.pathname === '/dashboard/pengaturan' ? 'bg-gray-600/70' : ''} py-2 px-4 rounded-md hover:bg-gray-600/70 w-full flex flex-row items-center gap-2`}>
+                        <FaGear />
+                        Pengaturan
+                    </button>
+                </li>
+                <li className="">
+                    <button onClick={clickLogout} className="py-2 px-4 rounded-md hover:bg-red-500/70 w-full flex flex-row items-center gap-2">
+                        <FaArrowRightFromBracket />
                         Logout
                     </button>
                 </li>
@@ -42,4 +46,36 @@ const Sidebar = () => {
     )
 }
 
+
+
+const SidebarMobile = ({clickCloseSidebar, Styling}) => {
+    return (
+        <>
+            <nav className={`bg-blue-500 h-full top-0 fixed overflow-clip transition-all duration-300 ${Styling}`}>
+                <div className="text-white relative">
+                    <button onClick={clickCloseSidebar} className="absolute rounded-full p-2 bg-gray-50/30 -translate-y-1/2 -translate-x-1/2 top-10 right-0">
+                    <FaArrowRight />
+                    </button>
+                    <ul className="text-white px-4 pt-18 space-y-4">
+                        <li>
+                            <Link to={'/berita'} className="py-3 px-4 truncate">Berita</Link>
+                        </li>
+                        <li>
+                            <Link to={'/profil-kelurahan'} className="py-3 px-4 truncate">Profil Kelurahan</Link>
+                        </li>
+                        <li>
+                            <Link to={'/potensi'} className="py-3 px-4 truncate">Potensi Kelurahan</Link>
+                        </li>
+                        <li>
+                            <Link to={'/login'} className="py-3 px-4 truncate">Login</Link>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </>
+    )
+}
+
+
 export default Sidebar
+export { SidebarMobile }

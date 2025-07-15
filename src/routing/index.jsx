@@ -9,6 +9,7 @@ import PrivateRoute from "./PrivateRoute";
 // PUBLIC
 const Home = lazy(() => import("@/pages/public/Home"));
 const About = lazy(() => import("@/pages/public/About"));
+const Potensi = lazy(() => import("@/pages/public/Potensi"));
 
 const News = lazy(() => import("@/pages/public/News"));
 const NewsDetail = lazy(() => import("@/pages/public/news/NewsDetail"));
@@ -16,8 +17,12 @@ const NewsDetail = lazy(() => import("@/pages/public/news/NewsDetail"));
 
 const Error = lazy(() => import("@/pages/public/Error"));
 const Login = lazy(() => import("@/pages/public/Login"));
+
+// DASHBOARD
 const Dashboard = lazy(() => import("@/pages/admin/Dashboard"));
-const DashboardHome = lazy(() => import("@/pages/admin/pages/DashboardHome"));
+const DashboardHome = lazy(() => import("@/pages/admin/pages/Home"));
+const DashboardNews = lazy(() => import("@/pages/admin/pages/News"));
+const DashboardSettings = lazy(() => import("@/pages/admin/pages/Settings"));
 
 const Routing = () => {
   return (
@@ -26,10 +31,14 @@ const Routing = () => {
 
         {/* PUBLIC ROUTES */}
         <Route path='/' element={<Home />} />
-        <Route path='/profil-desa' element={<About />} />
+        <Route path='/profil-kelurahan' element={<About />} />
+        <Route path='/potensi' element={<Potensi />} />
+
         <Route path='/berita' element={<News />} />
         <Route path='/berita/:slug' element={<NewsDetail />} />
+
         <Route path='/login' element={<Login />} />
+        
         <Route path='*' element={<Error />} />
         {/* DASHBOARD ROUTES */}
         <Route path='/dashboard/*' element={
@@ -38,7 +47,8 @@ const Routing = () => {
           </PrivateRoute>
         }>
           <Route index element={<DashboardHome />} />
-          {/* Example: <Route path="berita" element={<DashboardBerita />} /> */}
+          <Route path="berita" element={<DashboardNews />} /> 
+          <Route path="pengaturan" element={<DashboardSettings />} /> 
         </Route>
       </Routes>
     </Suspense>

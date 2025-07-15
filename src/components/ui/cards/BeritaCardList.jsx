@@ -18,16 +18,16 @@ const slugify = (text) =>
 const BeritaCardList = ({Image, Title, Description, Date}) => {
     return (
         <Link className="flex flex-row gap-4" to={`/berita/${slugify(Title)}`}>
-            <div className="flex bg-gray-400 overflow-clip shrink-0 w-96 h-58">
+            <div className="flex bg-gray-400 overflow-clip shrink-0 aspect-video w-34 xl:w-96">
                 <img src={Image} alt={Title} />
             </div>
-            <div className="space-y-2">
-                <h3 className="font-semibold text-3xl">{Title}</h3>
-                <div className='flex items-center gap-2 flex-row'>
+            <div className="space-y-1">
+                <h3 className="font-semibold text-base xl:text-3xl truncate">{Title}</h3>
+                <div className='flex items-center gap-2 flex-row text-xs xl:text-base'>
                     <FaCalendar />
                     <p>{Date}</p>
                 </div>
-                <p className="line-clamp-5 leading-loose">{Description}</p>
+                <p className="line-clamp-2 xl:line-clamp-5 xl:text-base text-xs xl:leading-loose">{Description}</p>
             </div>
         </Link>
     )

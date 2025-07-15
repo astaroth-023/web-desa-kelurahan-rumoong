@@ -3,7 +3,7 @@ import { FaArrowRight } from "react-icons/fa6"
 
 const Error = () => {
     return (
-        <section className='min-h-screen text-center flex justify-center items-center flex-col'>
+        <section className='min-h-screen text-center flex justify-center items-center flex-col bg-blue-50'>
             <div className="space-y-2">
                 <h2 className='font-bold text-4xl'>ERROR 404</h2>
                 <p className=''>Maaf, halaman yang Anda cari tidak ditemukan</p>
