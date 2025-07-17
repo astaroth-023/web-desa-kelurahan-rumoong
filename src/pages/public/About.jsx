@@ -17,7 +17,7 @@ const About = () => {
 
   return (
     <>
-      <section className="min-h-screen p-4 xl:px-54 2xl:px-96 pt-32 lg:pt-58 pb-32 bg-blue-50">
+      <section className="p-4 xl:px-54 2xl:px-96 pt-32 lg:pt-58 pb-32 bg-blue-50">
         <h2 className="text-2xl font-bold lg:text-start text-center">Visi & Misi Rumoong Bawah</h2>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-8 text-justify">
           <div className="mt-8 bg-white rounded-md shadow-md p-4">
@@ -32,8 +32,15 @@ const About = () => {
         </div>
       </section>
 
-      {/* SEJARAH */}
-      <section className="bg-blue-600 p-4 xl:px-54 2xl:px-96 pt-32 lg:pt-58 pb-32">
+       <section className="p-4 xl:px-54 2xl:px-96 pb-32 bg-blue-50">
+        <h2 className="text-2xl font-bold lg:text-start text-center">Sejarah Kelurahan Rumoong Bawah</h2>
+        <div className="mt-8">
+          <p className="leading-loose">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque a ipsum neque suscipit sit voluptatum quia nostrum laboriosam saepe dignissimos voluptates perspiciatis, porro impedit iure nihil harum, pariatur excepturi consequatur vero! Dolore dignissimos voluptas porro iste vitae? Placeat velit fuga, fugit, eius eaque quasi sint officia eos quod esse maiores enim. Similique rerum iure sunt pariatur, soluta quaerat facilis ex, reiciendis dolorum harum officiis quod! Itaque nemo, quidem, amet, beatae totam possimus optio minus libero unde odio sit velit odit ipsa sunt ab! Ab, voluptates non quia ducimus fuga, autem quasi officia iste obcaecati deserunt et unde voluptatum? Quam, provident.</p>
+        </div>
+       </section>
+
+      {/* Luas Wilayah dan Jumlah Penduduk */}
+      <section className="bg-blue-600 p-4 xl:px-54 2xl:px-96 pt-32 pb-32">
         <div className=" lg:flex justify-between items-center">
           <div className="text-center lg:text-start space-y-2">
             <h2 className="text-white lg:text-4xl text-2xl font-bold">Luas Wilayah</h2>
@@ -60,7 +67,7 @@ const About = () => {
         </div>
       </section>
       {/* STATISTIK */}
-      <section className="p-4 xl:px-54 2xl:px-96 pt-32 lg:pt-58 pb-32 bg-blue-50">
+      <section className="p-4 xl:px-54 2xl:px-96 pt-32 pb-32 bg-blue-50">
         <h2 className="font-bold text-2xl">Peta Lokasi Kelurahan Rumoong Bawah</h2>
         <div className="bg-white shadow-md rounded-md mt-8 p-4">
           <iframe
