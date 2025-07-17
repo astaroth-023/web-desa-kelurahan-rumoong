@@ -6,7 +6,7 @@ import { Outlet } from "react-router-dom"
 import { useState } from "react"
 
 const Dashboard = () => {
-
+  const navigate = useNavigate();
   const [showLogoutModal, setShowLogoutModal] = useState(false);
 
   const handleLogoutCLick = () => {
@@ -17,6 +17,12 @@ const Dashboard = () => {
     setShowLogoutModal(false);
   }
 
+  const handleLogout = async () => {
+    await supabase.auth.signOut();
+    setShowLogoutModal(false);
+    navigate('/');
+  }
+
   return (
     <>
       {/* LOGOUT MODAL */}
@@ -24,7 +30,8 @@ const Dashboard = () => {
         <>
           <div className="inset-0 bg-black/20 w-full z-99 h-full flex justify-center items-center fixed">
             <LogoutModal
-            CancelLogout={handleCancelLogout}
+              CancelLogout={handleCancelLogout}
+              handleLogout={handleLogout}
             />
           </div>
         </>
@@ -37,7 +44,7 @@ const Dashboard = () => {
         />
 
         {/* CONTENTS */}
-        <section className="min-h-screen pt-50 pl-72 px-32 pb-32">
+        <section className="min-h-screen pt-32 px-4 sm:px-24 lg:pt-50 lg:pl-72 lg:px-32 pb-32">
           <Outlet />
         </section>
       </div>

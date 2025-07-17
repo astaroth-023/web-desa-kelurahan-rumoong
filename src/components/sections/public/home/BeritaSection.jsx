@@ -12,7 +12,7 @@ const BeritaSection = () => {
   const { berita, loading, error } = useBeritaData()
   return (
     <>
-      <section className="min-h-screen py-32">
+      <section className="2xl:px-96 px-4 xl:px-50 pt-32 pb-32 bg-blue-50">
         <h2 className="text-center font-bold text-2xl xl:text-3xl">Berita Terbaru</h2>
         
         <div className="flex justify-center mt-8 xl:mt-16">

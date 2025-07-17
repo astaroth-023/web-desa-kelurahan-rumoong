@@ -1,14 +1,4 @@
-// Hooks
-import { useNavigate } from "react-router-dom"
-import { supabase } from "@/supabaseClient";
-
-const LogoutModal = ({CancelLogout}) => {
-    const navigate = useNavigate();
-
-    const handleLogout = async () => {
-        await supabase.auth.signOut();
-        navigate('/');
-    }
+const LogoutModal = ({CancelLogout, handleLogout}) => {
 
     return (
         <>
