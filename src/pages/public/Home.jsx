@@ -10,8 +10,8 @@ import { useEffect } from "react";
 const Home = () => {
 
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, []);
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }, [])
 
   return (
     <>

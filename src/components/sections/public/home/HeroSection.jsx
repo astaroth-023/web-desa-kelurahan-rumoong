@@ -1,5 +1,5 @@
 // Images
-import ImageCover from '@/assets/images/image_cover.webp'
+import ImageCover from '@/assets/images/Kelurahan.jpg'
 
 const HeroSection = () => {
     return (

@@ -5,13 +5,13 @@ import { useEffect } from "react"
 const Login = () => {
 
     useEffect(() => {
-        window.scrollTo({ top: 0, behavior: 'smooth'});
-    },[])
+        window.scrollTo({ top: 0, behavior: 'instant' });
+    }, [])
 
     return (
         <>
             <section className="min-h-screen flex lg:items-center pt-50 lg:pt-0 justify-center bg-blue-50 px-4">
-                <LoginForm/>
+                <LoginForm />
             </section>
         </>
     )

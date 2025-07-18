@@ -3,41 +3,37 @@
 
 // Hooks
 import { useEffect } from "react"
-import { useNavigate } from "react-router-dom"
+import { useNavigate, Link } from "react-router-dom"
 
 // Icons
-import { FaArrowRight } from "react-icons/fa6"
+import { FaArrowRight, FaChevronRight } from "react-icons/fa6"
 
 const About = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: 'instant' });
   }, [])
 
   return (
     <>
-      <section className="p-4 xl:px-54 2xl:px-96 pt-32 lg:pt-58 pb-32 bg-blue-50">
-        <h2 className="text-2xl font-bold lg:text-start text-center">Visi & Misi Rumoong Bawah</h2>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-8 text-justify">
-          <div className="mt-8 bg-white rounded-md shadow-md p-4">
-            <h3 className="font-semibold lg:text-2xl">Visi</h3>
-            <p className="lg:text-base text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora possimus deserunt quasi obcaecati, dignissimos eaque. Tempore doloremque aperiam nihil facere odio, repudiandae dolores voluptatibus provident eligendi quia, veniam, suscipit delectus inventore recusandae error laborum. Reiciendis dolor ducimus accusantium repellat laborum, dolorem vitae sapiente possimus quo, et, quibusdam blanditiis expedita dignissimos!</p>
-          </div>
-          <div className="mt-8 bg-white rounded-md shadow-md p-4">
-            <h3 className="font-semibold lg:text-2xl">Misi</h3>
-            <p className="lg:text-base text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora possimus deserunt quasi obcaecati, dignissimos eaque. Tempore doloremque aperiam nihil facere odio, repudiandae dolores voluptatibus provident eligendi quia, veniam, suscipit delectus inventore recusandae error laborum. Reiciendis dolor ducimus accusantium repellat laborum, dolorem vitae sapiente possimus quo, et, quibusdam blanditiis expedita dignissimos!</p>
-          </div>
-
+      <section className=' p-4 xl:px-54 2xl:px-96 pt-32 lg:pt-58 pb-32 bg-blue-50'>
+        <h2 className="font-bold text-xl xl:text-4xl">Profil Kelurahan</h2>
+        <div className="flex items-center flex-row gap-2 mt-4 xl:text-base text-xs">
+          <Link to={'/'} className="transition-all duration-200 hover:!text-yellow-400">Beranda</Link>
+          <FaChevronRight />
+          <p className="text-gray-500">Profil Kelurahan</p>
+        </div>
+        <div className="mt-8 xl:mt-12">
+        <h2 className="text-base xl:text-3xl font-bold lg:text-start">Sejarah Kelurahan Rumoong Bawah</h2>
+        <div className="mt-4 xl:mt-8 space-y-2">
+          <p className="lg:text-base text-sm leading-loose">Kelurahan Rumoong Bawah merupakan sebuah kelurahan yang terletak di Kecamatan Amurang barat. Kabupaten Minahasa Selatan,Provinsi Sulawesi Utara. Dahulu nama Rumoong dikatakan sebagai Roong, menurut keterangan masyarakat setempat dan tokoh masyarakat terdahulu, “Roong” ini berasal dari sebuah pohon least yang artinya menjadi tempat persinggahan dan mencari tempat tinggal orang-orang dari Minahasa Tengah sehingga dinamakan Roong. “Roong” artinya tempat persinggahan tua-tua. Penduduk minahasa tengah masuk di desa rumoong pada tahun sekitar 1600-an dan banyak penduduk dari daerah-daerah lain yang masuk, menurut keterangan masyarakat setempat dan tokoh masyarakat terdahulu penataan desa rumoong sudah ada pada tahun 1800-an dan penataan batas wilayah di buat oleh orang yang berasal dari jawa yang datang untuk mencari tempat tinggal. Batas-batas wilayah di rumoong ini mudah diketahui karna semua batasnya itu lurus dari atas gunung sampai sungai.</p>
+          <p className="lg:text-base text-sm leading-loose">Dahulu Kelurahan Rumoong Bawah merupakan sebuah desa. Namun dengan adanya perkembangan zaman, terjadi pemekaran dari desa menjadi kelurahan dimana waktu itu kapasitas penduduk dan pemukiman tempat tinggal sudah melebihi batas maximum sehingga sebagian masyarakat menyepakati untuk beralih ke desa. Pada tahun 1981 ditetapkannya Kelurahan Rumoong Bawah.</p>
+          <p className="lg:text-base text-sm leading-loose">Adat istiadat dari Kelurahan Rumoong Bawah dulunya ada yang disebut ‘’Watu Tumotowa’’ tetapi adat istiadat tersebut sudah tidak dilestarikan oleh masyarakat Kelurahan Rumoong Bawah dengan alasan penerus adat istiadat tersebut sudah wafat, sehingga tidak ada penerus. Dan adat istiadat yang masih berlaku juga dilestarikan sampai sekarang di Kelurahan Rumoong Bawah adalah ‘’Mapalus atau Gotong Royong”. Kemudian ada Budaya Pengucapan Syukur tahunan yang masih dilestarikan oleh masyarakat.</p>
+          <p className="lg:text-base text-sm leading-loose">Kelurahan Rumoong Bawah memiliki luas wilayah ± 4.00 Ha, dengan jumlah penduduk Laki-laki 1.097 dan Perempuan 1.077. Jumlah 2.149. Hasil sumber daya alam dari Kelurahan Rumoog Bawah adalah Pertanian seperti “Kopra, Arang Tempurung” dan Perkebunan seperti “Jagung, Nilam, Dll”. Kedua hasil SDA ini sebagai penunjang ekonomi dan menjadi penghasilan utama masyarakat Kelurahan Rumoong Bawah, juga memiliki potensi wisata Air Terjun yang dinamakan ‘’Air Terjun Supawandi’’.</p>
+        </div>
         </div>
       </section>
-
-       <section className="p-4 xl:px-54 2xl:px-96 pb-32 bg-blue-50">
-        <h2 className="text-2xl font-bold lg:text-start text-center">Sejarah Kelurahan Rumoong Bawah</h2>
-        <div className="mt-8">
-          <p className="leading-loose">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque a ipsum neque suscipit sit voluptatum quia nostrum laboriosam saepe dignissimos voluptates perspiciatis, porro impedit iure nihil harum, pariatur excepturi consequatur vero! Dolore dignissimos voluptas porro iste vitae? Placeat velit fuga, fugit, eius eaque quasi sint officia eos quod esse maiores enim. Similique rerum iure sunt pariatur, soluta quaerat facilis ex, reiciendis dolorum harum officiis quod! Itaque nemo, quidem, amet, beatae totam possimus optio minus libero unde odio sit velit odit ipsa sunt ab! Ab, voluptates non quia ducimus fuga, autem quasi officia iste obcaecati deserunt et unde voluptatum? Quam, provident.</p>
-        </div>
-       </section>
 
       {/* Luas Wilayah dan Jumlah Penduduk */}
       <section className="bg-blue-600 p-4 xl:px-54 2xl:px-96 pt-32 pb-32">
@@ -68,8 +64,8 @@ const About = () => {
       </section>
       {/* STATISTIK */}
       <section className="p-4 xl:px-54 2xl:px-96 pt-32 pb-32 bg-blue-50">
-        <h2 className="font-bold text-2xl">Peta Lokasi Kelurahan Rumoong Bawah</h2>
-        <div className="bg-white shadow-md rounded-md mt-8 p-4">
+        <h2 className="font-bold text-xl lg:text-start text-center xl:text-3xl">Peta Lokasi Kelurahan Rumoong Bawah</h2>
+        <div className="bg-white shadow-md rounded-md mt-8 p-2 md:p-4">
           <iframe
             className="w-full h-[500px]"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6931.168778499253!2d124.56887919957839!3d1.1731739546139395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32875915f999a005%3A0xd34fc5eb1b896b4c!2sRumoong%20Bawah%2C%20Kec.%20Amurang%20Bar.%2C%20Kabupaten%20Minahasa%20Selatan%2C%20Sulawesi%20Utara!5e1!3m2!1sid!2sid!4v1752470855423!5m2!1sid!2sid"
@@ -78,8 +74,8 @@ const About = () => {
           </iframe>
         </div>
         <div className="flex justify-center items-center mt-8">
-          <button onClick={() => window.open('https://maps.app.goo.gl/oyD7beFn3obdbTwEA', '_blank', 'noopener,noreferrer')} 
-          className="rounded-full text-white py-3 px-6 lg:text-base text-sm bg-blue-400 transition-all duration-300 flex items-center gap-2 flex-row hover:bg-blue-500">
+          <button onClick={() => window.open('https://maps.app.goo.gl/oyD7beFn3obdbTwEA', '_blank', 'noopener,noreferrer')}
+            className="rounded-full text-white py-3 px-6 lg:text-base text-sm bg-blue-400 transition-all duration-300 flex items-center gap-2 flex-row hover:bg-blue-500">
             Lihat Detail Peta
             <FaArrowRight />
           </button>
