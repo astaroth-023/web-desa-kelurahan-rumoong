@@ -13,7 +13,6 @@ const Login = () => {
             <section className="min-h-screen flex lg:items-center pt-50 lg:pt-0 justify-center bg-blue-50 px-4">
                 <LoginForm/>
             </section>
-
         </>
     )
 }
