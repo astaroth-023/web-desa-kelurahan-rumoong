@@ -4,6 +4,7 @@ import LogoutModal from "@/components/ui/modals/LogoutModal"
 // HOOKS
 import { Outlet, useNavigate } from "react-router-dom"
 import { useState } from "react"
+import { supabase } from "@/supabaseClient"
 
 const Dashboard = () => {
   const navigate = useNavigate();
