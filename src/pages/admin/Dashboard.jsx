@@ -2,7 +2,7 @@
 import Sidebar from "@/components/layout/Sidebar"
 import LogoutModal from "@/components/ui/modals/LogoutModal"
 // HOOKS
-import { Outlet } from "react-router-dom"
+import { Outlet, useNavigate } from "react-router-dom"
 import { useState } from "react"
 
 const Dashboard = () => {
