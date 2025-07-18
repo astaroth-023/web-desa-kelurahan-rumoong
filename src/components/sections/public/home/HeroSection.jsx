@@ -5,7 +5,7 @@ const HeroSection = () => {
     return (
         <>
             <section className='relative bg-gray-700 h-[800px]'>
-                <img className='h-full w-full object-cover brightness-20' src={ImageCover} alt="" />
+                <img className='h-full w-full object-cover brightness-30' src={ImageCover} alt="" />
                 <div className='xl:block hidden'>
                     <div className='absolute -translate-x-1/2 space-y-4 -translate-y-1/2 top-1/2 left-1/2 2xl:left-[20%] text-white z-10'>
                         <h1 className='text-6xl font-bold'>KELURAHAN</h1>
