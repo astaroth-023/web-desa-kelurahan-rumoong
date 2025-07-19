@@ -149,7 +149,7 @@ const Galeri = () => {
                     <FaChevronRight />
                     <p className="text-gray-500">Galeri Kelurahan</p>
                 </div>
-                <div className="grid grid-cols-3 gap-4 mt-8 lg:mt-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8 lg:mt-12">
                     {currentItems.map((galeri, index) => (
                         <div key={index} onClick={() => openModal(galeri.image)} className="cursor-pointer" >
                             <img src={galeri.image} className="aspect-video object-cover rounded-md shadow-md" loading="lazy" alt={`Gallery ${galeri.id}`} />
