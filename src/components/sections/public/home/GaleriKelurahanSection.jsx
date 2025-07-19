@@ -17,26 +17,32 @@ const galery = [
     {
         id: 1,
         image: Gallery1,
+        name: 'Jalan Trans Sulawesi',
     },
     {
         id: 2,
         image: Gallery2,
+        name: 'Lingkungan Rumoong Bawah',
     },
     {
         id: 3,
         image: Gallery3,
+        name: 'SD Negeri Rumoong Bawah',
     },
     {
         id: 4,
         image: Gallery4,
+        name: 'Gereja GMIM Efata',
     },
     {
         id: 5,
         image: Gallery5,
+        name: 'Gereja KGPM Betlehem',
     },
     {
         id: 6,
         image: Gallery6,
+        name: 'Gereja GPdI Solideo City of God',
     },
 ]
 
@@ -44,8 +50,8 @@ const GaleriKelurahanSection = () => {
     const [selectedImage, setSelectedImage] = useState(null)
     const [isModalOpen, setIsModalOpen] = useState(false)
 
-    const openModal = (image) => {
-        setSelectedImage(image)
+    const openModal = (imageObj) => {
+        setSelectedImage(imageObj)
         setIsModalOpen(true)
     }
 
@@ -63,7 +69,7 @@ const GaleriKelurahanSection = () => {
                         {galery.slice(0, 9).map((galeri, index) => (
                             <div
                                 key={index}
-                                onClick={() => openModal(galeri.image)}
+                                onClick={() => openModal(galeri)}
                                 className="w-full cursor-pointer sm:aspect-video aspect-square bg-gray-300 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-200"
                             >
                                 <img src={galeri.image} loading='lazy' className="w-full h-full object-cover" alt="" />
@@ -86,17 +92,24 @@ const GaleriKelurahanSection = () => {
 
                 {isModalOpen && (
                     <div
+                        className="fixed flex-col inset-0 bg-black/80 flex justify-center items-center z-50"
                         onClick={closeModal}
-                        className="fixed inset-0 md:px-0 px-4 py-4 bg-black/50 md:bg-black/30 bg-opacity-70 flex justify-center items-center z-50"
                     >
-                        <img
-                            src={selectedImage}
-                            alt="Full preview"
-                            className="max-w-full max-h-full rounded-lg shadow-lg"
-                            onClick={(e) => e.stopPropagation()}
-                        />
+                        <div className="relative p-2">
+                            <div className="flex justify-start mb-4 lg:mb-8">
+                                <p className="text-start font-bold text-xl xl:text-2xl 2xl:text-3xl text-white">{selectedImage.name}</p>
+                            </div>
+                            <img
+                                src={selectedImage.image}
+                                alt="Preview"
+                                className="max-w-full max-h-[80vh] object-contain rounded-lg shadow-lg"
+                                onClick={(e) => e.stopPropagation()}
+                            />
+                        </div>
+
                     </div>
                 )}
+
             </section>
         </>
     )

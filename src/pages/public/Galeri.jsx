@@ -26,58 +26,72 @@ const galery = [
     {
         id: 1,
         image: Gallery1,
+        name: 'Jalan Trans Sulawesi'
     },
     {
         id: 2,
         image: Gallery2,
+        name: 'Lingkungan Kelurahan Rumoong Bawah'
     },
     {
         id: 3,
         image: Gallery3,
+        name: 'SD Negeri Rumoong Bawah'
     },
     {
         id: 4,
         image: Gallery4,
+        name: 'Gereja GMIM Efata'
     },
     {
         id: 5,
         image: Gallery5,
+        name: 'Gereja KGPM Betlehem'
     },
     {
         id: 6,
         image: Gallery6,
+        name: 'Kantor Kelurahan Rumoong Bawah'
     },
     {
         id: 7,
         image: Gallery7,
+        name: 'Pembuatan Arang'
     },
     {
         id: 8,
         image: Gallery8,
+        name: 'Pengolahan Saguer menjadi Cap Tikus'
     },
     {
         id: 9,
         image: Gallery9,
+        name: 'Pembuatan Kopra'
     },
     {
         id: 10,
         image: Gallery10,
+        name: 'Air Terjun Sapawandi'
     },
     {
         id: 11,
         image: Gallery11,
+        name: 'Kebun Rica'
     },
     {
         id: 12,
         image: Gallery12,
+        name: 'Kebun Kepala'
     },
     {
         id: 13,
         image: Gallery13,
+        name: 'Piala Prestasi Kelurahan'
     },
     {
         id: 14,
         image: Gallery14,
+        name: 'Gereja GPdI Solideo City of God'
     },
 ]
 
@@ -109,8 +123,8 @@ const Galeri = () => {
     }
 
     // Open the modal with selected image
-    const openModal = (image) => {
-        setSelectedImage(image)
+    const openModal = (imageObj) => {
+        setSelectedImage(imageObj)
         setIsModalOpen(true)
     }
 
@@ -128,17 +142,21 @@ const Galeri = () => {
 
             {isModalOpen && (
                 <div
-                    className="fixed inset-0 bg-black/50 flex justify-center items-center z-50"
+                    className="fixed flex-col inset-0 bg-black/80 flex justify-center items-center z-50"
                     onClick={closeModal}
                 >
-                    <div className="relative">
+                    <div className="relative p-2">
+                        <div className="flex justify-start mb-4 lg:mb-8">
+                            <p className="text-start font-bold text-xl xl:text-2xl 2xl:text-3xl text-white">{selectedImage.name}</p>
+                        </div>
                         <img
-                            src={selectedImage}
+                            src={selectedImage.image}
                             alt="Preview"
                             className="max-w-full max-h-[80vh] object-contain rounded-lg shadow-lg"
-                            onClick={(e) => e.stopPropagation()} 
+                            onClick={(e) => e.stopPropagation()}
                         />
                     </div>
+
                 </div>
             )}
 
@@ -151,7 +169,7 @@ const Galeri = () => {
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8 lg:mt-12">
                     {currentItems.map((galeri, index) => (
-                        <div key={index} onClick={() => openModal(galeri.image)} className="cursor-pointer" >
+                        <div key={index} onClick={() => openModal(galeri)} className="cursor-pointer" >
                             <img src={galeri.image} className="aspect-video object-cover rounded-md shadow-md" loading="lazy" alt={`Gallery ${galeri.id}`} />
                         </div>
                     ))}
