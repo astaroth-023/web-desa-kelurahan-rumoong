@@ -100,9 +100,9 @@ const SidebarMobile = ({ clickCloseSidebar, Styling, MobileClickLogout }) => {
                                 <li>
                                     <Link to={'/prestasi'} className="py-3 px-4 truncate">Prestasi Kelurahan</Link>
                                 </li>
-                                <li>
+                                {/* <li>
                                     <Link to={'/login'} className="py-3 px-4 truncate">Login</Link>
-                                </li>
+                                </li> */}
                             </ul>
                         </>
                     )}
