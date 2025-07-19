@@ -8,6 +8,7 @@ import Kelapa from '@/assets/images/kebun-kelapa.jpg'
 import Rica from '@/assets/images/kebun-rica.jpg'
 import Arang from '@/assets/images/pembuatan-arang.jpg'
 import AirTerjun from '@/assets/images/Air-Terjun-Sapawandi.jpg'
+import Nilam from '@/assets/images/nilam.jpg'
 
 const potensiData = {
   wisata: [
@@ -24,7 +25,8 @@ const potensiData = {
   ],
   perkebunan: [
     { id: 4, image: Rica, name: "Kebun Rica" },
-    { id: 5, image: Kelapa, name: "Kebun Kelapa" }
+    { id: 5, image: Kelapa, name: "Kebun Kelapa" },
+    { id: 6, image: Nilam, name: "Kebun Nilam" }
   ]
 }
 

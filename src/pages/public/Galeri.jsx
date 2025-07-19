@@ -20,6 +20,7 @@ import Gallery11 from '@/assets/images/kebun-rica.jpg'
 import Gallery12 from '@/assets/images/kebun-kelapa.jpg'
 import Gallery13 from '@/assets/images/prestasi.jpg'
 import Gallery14 from '@/assets/images/gereja-gpdi.jpg'
+import Gallery15 from '@/assets/images/nilam.jpg'
 
 // Data Images
 const galery = [
@@ -92,6 +93,11 @@ const galery = [
         id: 14,
         image: Gallery14,
         name: 'Gereja GPdI Solideo City of God'
+    },
+    {
+        id: 15,
+        image: Gallery15,
+        name: 'Kebun Nilam'
     },
 ]
 
