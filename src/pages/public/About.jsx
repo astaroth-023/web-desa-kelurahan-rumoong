@@ -2,7 +2,7 @@
 import PeriodePemerintah from '@/components/ui/tables/PeriodePemerintah'
 
 // Images
-import StrukturOrganisasi from '@/assets/images/so.png'
+import StrukturOrganisasi from '@/assets/images/so.svg'
 
 // Hooks
 import { useEffect, useState } from "react"
