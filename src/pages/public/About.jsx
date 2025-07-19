@@ -1,8 +1,11 @@
 // Components
+import PeriodePemerintah from '@/components/ui/tables/PeriodePemerintah'
 
+// Images
+import StrukturOrganisasi from '@/assets/images/so.png'
 
 // Hooks
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import { useNavigate, Link } from "react-router-dom"
 
 // Icons
@@ -11,29 +14,69 @@ import { FaArrowRight, FaChevronRight } from "react-icons/fa6"
 const About = () => {
   const navigate = useNavigate();
 
+  const [selectedImage, setSelectedImage] = useState(null)
+  const [isModalOpen, setIsModalOpen] = useState(false)
+
+  const openModal = (image) => {
+    setSelectedImage(image)
+    setIsModalOpen(true)
+  }
+
+  const closeModal = () => {
+    setSelectedImage(null)
+    setIsModalOpen(false)
+  }
+
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' });
   }, [])
 
   return (
     <>
-      <section className=' p-4 xl:px-54 2xl:px-96 pt-32 lg:pt-58 pb-32 bg-blue-50'>
-        <h2 className="font-bold text-xl xl:text-4xl">Profil Kelurahan</h2>
+      {isModalOpen && (
+        <div
+          onClick={closeModal}
+          className="fixed inset-0 md:px-0 px-4 py-4 bg-black/50 md:bg-black/30 bg-opacity-70 flex justify-center items-center z-50"
+        >
+          <div className='bg-white rounded-md p-4'>
+            <img
+              src={selectedImage}
+              alt="Full preview"
+              className="max-w-full max-h-full"
+              onClick={(e) => e.stopPropagation()}
+            />
+          </div>
+
+        </div>
+      )}
+
+      <section className='p-4 xl:px-54 2xl:px-96 pt-32 lg:pt-58 pb-24 bg-blue-50'>
+        <h2 className="font-bold text-2xl xl:text-4xl">Profil Kelurahan</h2>
         <div className="flex items-center flex-row gap-2 mt-4 xl:text-base text-xs">
           <Link to={'/'} className="transition-all duration-200 hover:!text-yellow-400">Beranda</Link>
           <FaChevronRight />
           <p className="text-gray-500">Profil Kelurahan</p>
         </div>
         <div className="mt-8 xl:mt-12">
-        <h2 className="text-base xl:text-3xl font-bold lg:text-start">Sejarah Kelurahan Rumoong Bawah</h2>
-        <div className="mt-4 xl:mt-8 space-y-2">
-          <p className="lg:text-base text-sm leading-loose">Kelurahan Rumoong Bawah merupakan sebuah kelurahan yang terletak di Kecamatan Amurang barat. Kabupaten Minahasa Selatan,Provinsi Sulawesi Utara. Dahulu nama Rumoong dikatakan sebagai Roong, menurut keterangan masyarakat setempat dan tokoh masyarakat terdahulu, “Roong” ini berasal dari sebuah pohon least yang artinya menjadi tempat persinggahan dan mencari tempat tinggal orang-orang dari Minahasa Tengah sehingga dinamakan Roong. “Roong” artinya tempat persinggahan tua-tua. Penduduk minahasa tengah masuk di desa rumoong pada tahun sekitar 1600-an dan banyak penduduk dari daerah-daerah lain yang masuk, menurut keterangan masyarakat setempat dan tokoh masyarakat terdahulu penataan desa rumoong sudah ada pada tahun 1800-an dan penataan batas wilayah di buat oleh orang yang berasal dari jawa yang datang untuk mencari tempat tinggal. Batas-batas wilayah di rumoong ini mudah diketahui karna semua batasnya itu lurus dari atas gunung sampai sungai.</p>
-          <p className="lg:text-base text-sm leading-loose">Dahulu Kelurahan Rumoong Bawah merupakan sebuah desa. Namun dengan adanya perkembangan zaman, terjadi pemekaran dari desa menjadi kelurahan dimana waktu itu kapasitas penduduk dan pemukiman tempat tinggal sudah melebihi batas maximum sehingga sebagian masyarakat menyepakati untuk beralih ke desa. Pada tahun 1981 ditetapkannya Kelurahan Rumoong Bawah.</p>
-          <p className="lg:text-base text-sm leading-loose">Adat istiadat dari Kelurahan Rumoong Bawah dulunya ada yang disebut ‘’Watu Tumotowa’’ tetapi adat istiadat tersebut sudah tidak dilestarikan oleh masyarakat Kelurahan Rumoong Bawah dengan alasan penerus adat istiadat tersebut sudah wafat, sehingga tidak ada penerus. Dan adat istiadat yang masih berlaku juga dilestarikan sampai sekarang di Kelurahan Rumoong Bawah adalah ‘’Mapalus atau Gotong Royong”. Kemudian ada Budaya Pengucapan Syukur tahunan yang masih dilestarikan oleh masyarakat.</p>
-          <p className="lg:text-base text-sm leading-loose">Kelurahan Rumoong Bawah memiliki luas wilayah ± 4.00 Ha, dengan jumlah penduduk Laki-laki 1.097 dan Perempuan 1.077. Jumlah 2.149. Hasil sumber daya alam dari Kelurahan Rumoog Bawah adalah Pertanian seperti “Kopra, Arang Tempurung” dan Perkebunan seperti “Jagung, Nilam, Dll”. Kedua hasil SDA ini sebagai penunjang ekonomi dan menjadi penghasilan utama masyarakat Kelurahan Rumoong Bawah, juga memiliki potensi wisata Air Terjun yang dinamakan ‘’Air Terjun Supawandi’’.</p>
-        </div>
+          <h2 className="text-xl xl:text-3xl font-bold lg:text-start">Sejarah Kelurahan Rumoong Bawah</h2>
+          <div className="mt-4 xl:mt-8 space-y-2">
+            <p className="lg:text-base text-sm leading-loose">Kelurahan Rumoong Bawah merupakan sebuah kelurahan yang terletak di Kecamatan Amurang barat. Kabupaten Minahasa Selatan,Provinsi Sulawesi Utara. Dahulu nama Rumoong dikatakan sebagai Roong, menurut keterangan masyarakat setempat dan tokoh masyarakat terdahulu, “Roong” ini berasal dari sebuah pohon least yang artinya menjadi tempat persinggahan dan mencari tempat tinggal orang-orang dari Minahasa Tengah sehingga dinamakan Roong. “Roong” artinya tempat persinggahan tua-tua. Penduduk minahasa tengah masuk di desa rumoong pada tahun sekitar 1600-an dan banyak penduduk dari daerah-daerah lain yang masuk, menurut keterangan masyarakat setempat dan tokoh masyarakat terdahulu penataan desa rumoong sudah ada pada tahun 1800-an dan penataan batas wilayah di buat oleh orang yang berasal dari jawa yang datang untuk mencari tempat tinggal. Batas-batas wilayah di rumoong ini mudah diketahui karna semua batasnya itu lurus dari atas gunung sampai sungai.</p>
+            <p className="lg:text-base text-sm leading-loose">Dahulu Kelurahan Rumoong Bawah merupakan sebuah desa. Namun dengan adanya perkembangan zaman, terjadi pemekaran dari desa menjadi kelurahan dimana waktu itu kapasitas penduduk dan pemukiman tempat tinggal sudah melebihi batas maximum sehingga sebagian masyarakat menyepakati untuk beralih ke desa. Pada tahun 1981 ditetapkannya Kelurahan Rumoong Bawah.</p>
+            <p className="lg:text-base text-sm leading-loose">Adat istiadat dari Kelurahan Rumoong Bawah dulunya ada yang disebut ‘’Watu Tumotowa’’ tetapi adat istiadat tersebut sudah tidak dilestarikan oleh masyarakat Kelurahan Rumoong Bawah dengan alasan penerus adat istiadat tersebut sudah wafat, sehingga tidak ada penerus. Dan adat istiadat yang masih berlaku juga dilestarikan sampai sekarang di Kelurahan Rumoong Bawah adalah ‘’Mapalus atau Gotong Royong”. Kemudian ada Budaya Pengucapan Syukur tahunan yang masih dilestarikan oleh masyarakat.</p>
+            <p className="lg:text-base text-sm leading-loose">Kelurahan Rumoong Bawah memiliki luas wilayah ± 4.00 Ha, dengan jumlah penduduk Laki-laki 1.097 dan Perempuan 1.077. Jumlah 2.149. Hasil sumber daya alam dari Kelurahan Rumoog Bawah adalah Pertanian seperti “Kopra, Arang Tempurung” dan Perkebunan seperti “Jagung, Nilam, Dll”. Kedua hasil SDA ini sebagai penunjang ekonomi dan menjadi penghasilan utama masyarakat Kelurahan Rumoong Bawah, juga memiliki potensi wisata Air Terjun yang dinamakan ‘’Air Terjun Supawandi’’.</p>
+          </div>
         </div>
       </section>
+
+      <section className=' p-4 xl:px-54 2xl:px-96 pb-32 bg-blue-50'>
+        <h2 className="text-xl xl:text-3xl font-bold lg:text-start text-center">
+          Periode Pemerintahan Hukum Tua / Lurah Kelurahan Rumoong Bawah
+        </h2>
+        <div className='md:mt-12 mt-8'>
+          <PeriodePemerintah />
+        </div>
+      </section>
+
 
       {/* Luas Wilayah dan Jumlah Penduduk */}
       <section className="bg-blue-600 p-4 xl:px-54 2xl:px-96 pt-32 pb-32">
@@ -62,7 +105,8 @@ const About = () => {
           </div>
         </div>
       </section>
-      {/* STATISTIK */}
+
+      {/* PETA */}
       <section className="p-4 xl:px-54 2xl:px-96 pt-32 pb-32 bg-blue-50">
         <h2 className="font-bold text-xl lg:text-start text-center xl:text-3xl">Peta Lokasi Kelurahan Rumoong Bawah</h2>
         <div className="bg-white shadow-md rounded-md mt-8 p-2 md:p-4">
@@ -79,6 +123,15 @@ const About = () => {
             Lihat Detail Peta
             <FaArrowRight />
           </button>
+        </div>
+      </section>
+
+      <section className="p-4 xl:px-54 2xl:px-96 pb-32 bg-blue-50">
+        <h2 className="font-bold text-xl text-center xl:text-3xl">Struktur Organisasi Kelurahan Rumoong Bawah</h2>
+        <div className="flex justify-center items-center mt-8 md:mt-12">
+          <div onClick={() => openModal(StrukturOrganisasi)} className="cursor-pointer">
+            <img src={StrukturOrganisasi} loading='lazy' alt="Struktur Organisasi Kelurahan Rumoong Bawah" />
+          </div>
         </div>
       </section>
 
