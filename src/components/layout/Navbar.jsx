@@ -32,13 +32,16 @@ const Navbar = ({onclickButton}) => {
                             <Link className="transition-all duration-200 hover:!text-yellow-300" to={'/berita'}>Berita</Link>
                         </li>
                         <li>
+                            <Link className="transition-all duration-200 hover:!text-yellow-300" to={'/galeri'}>Galeri</Link>
+                        </li>
+                        <li>
                             <Link className="transition-all duration-200 hover:!text-yellow-300" to={'/profil-kelurahan'}>Profil Kelurahan</Link>
                         </li>
                         <li>
-                            <Link className="transition-all duration-200 hover:!text-yellow-300" to={'/potensi'}>Potensi Kelurahan</Link>
+                            <Link className="transition-all duration-200 hover:!text-yellow-300" to={'/potensi'}>Potensi</Link>
                         </li>
                         <li>
-                            <Link className="transition-all duration-200 hover:!text-yellow-300" to={'/prestasi'}>Prestasi Kelurahan</Link>
+                            <Link className="transition-all duration-200 hover:!text-yellow-300" to={'/prestasi'}>Prestasi</Link>
                         </li>
                         <li className={`${location.pathname === '/login' ? 'hidden' : ''} ${location.pathname.startsWith('/dashboard') ? 'hidden' : ''}`}>
                             <Link className="border border-white py-2 px-6 rounded-md transition-all duration-200 hover:bg-white hover:!text-black" to={'/login'}>Login</Link>

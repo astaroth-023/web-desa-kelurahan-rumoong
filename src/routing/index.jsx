@@ -9,6 +9,7 @@ import PrivateRoute from "./PrivateRoute";
 // PUBLIC
 const Home = lazy(() => import("@/pages/public/Home"));
 const About = lazy(() => import("@/pages/public/About"));
+const Galeri = lazy(() => import("@/pages/public/Galeri"));
 const Potensi = lazy(() => import("@/pages/public/Potensi"));
 const Prestasi = lazy(() => import("@/pages/public/Prestasi"));
 
@@ -33,6 +34,7 @@ const Routing = () => {
         {/* PUBLIC ROUTES */}
         <Route path='/' element={<Home />} />
         <Route path='/profil-kelurahan' element={<About />} />
+        <Route path='/galeri' element={<Galeri />} />
         <Route path='/potensi' element={<Potensi />} />
         <Route path='/prestasi' element={<Prestasi />} />
 

@@ -58,7 +58,7 @@ const PeriodePemerintah = () => {
                                 {['NO', 'NAMA', 'JABATAN', 'TAHUN'].map((header) => (
                                     <th
                                         key={header}
-                                        className="px-6 py-3 text-left font-semibold text-white uppercase tracking-wider"
+                                        className="px-6 py-3 text-left !text-xs lg:!text-base font-bold text-white uppercase tracking-wider"
                                     >
                                         {header}
                                     </th>
@@ -71,10 +71,10 @@ const PeriodePemerintah = () => {
                                     key={no}
                                     className={i % 2 === 0 ? 'bg-gray-50 hover:bg-blue-50' : 'bg-white hover:bg-blue-50'}
                                 >
-                                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{no}.</td>
-                                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800">{nama}</td>
-                                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700">{jabatan}</td>
-                                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700">{tahun}</td>
+                                    <td className="px-6 py-4 whitespace-nowrap text-xs lg:text-sm font-medium text-gray-900">{no}.</td>
+                                    <td className="px-6 py-4 whitespace-nowrap text-xs lg:text-sm text-gray-800">{nama}</td>
+                                    <td className="px-6 py-4 whitespace-nowrap text-xs lg:text-sm text-gray-700">{jabatan}</td>
+                                    <td className="px-6 py-4 whitespace-nowrap text-xs lg:text-sm text-gray-700">{tahun}</td>
                                 </tr>
                             ))}
                         </tbody>

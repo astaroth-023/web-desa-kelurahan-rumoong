@@ -89,6 +89,9 @@ const SidebarMobile = ({ clickCloseSidebar, Styling, MobileClickLogout }) => {
                                     <Link to={'/berita'} className="py-3 px-4 truncate">Berita</Link>
                                 </li>
                                 <li>
+                                    <Link to={'/galeri'} className="py-3 px-4 truncate">Galeri</Link>
+                                </li>
+                                <li>
                                     <Link to={'/profil-kelurahan'} className="py-3 px-4 truncate">Profil Kelurahan</Link>
                                 </li>
                                 <li>

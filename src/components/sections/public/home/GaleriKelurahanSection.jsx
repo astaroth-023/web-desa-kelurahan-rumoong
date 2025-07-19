@@ -4,7 +4,7 @@ import Gallery2 from '@/assets/images/Lingkungan.PNG'
 import Gallery3 from '@/assets/images/sd-negeri-rumoong-bawah.PNG'
 import Gallery4 from '@/assets/images/gereja-gmim.jpg'
 import Gallery5 from '@/assets/images/gereja-kgpm-betlehem.jpg'
-import Gallery6 from '@/assets/images/Kelurahan.jpg'
+import Gallery6 from '@/assets/images/gereja-gpdi.jpg'
 
 // Icons
 import { FaArrowRight } from 'react-icons/fa6'
@@ -76,7 +76,7 @@ const GaleriKelurahanSection = () => {
                 </div>
                 <div className="flex mt-8 justify-center">
                     <Link
-                        to={'/potensi'}
+                        to={'/galeri'}
                         className="rounded-full py-3 px-6 lg:!text-base font-semibold !text-xs bg-blue-500 transition-all duration-200 hover:bg-blue-600 !text-white flex flex-row items-center gap-2"
                     >
                         Lihat Arsip Galeri
