@@ -28,7 +28,7 @@ const BeritaSection = () => {
             )}
             {!loading && !error && berita.length === 0 && (
               <div className="col-span-3 text-center py-32 text-gray-500">
-                Tidak Ada Berita Ditemukan
+                Belum ada Data Berita Dipublikasikan...
               </div>
             )}
             {!loading && !error && berita.length > 0 && berita.map(item => (

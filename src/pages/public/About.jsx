@@ -50,6 +50,7 @@ const About = () => {
         </div>
       )}
 
+      {/* SEJARAH */}
       <section className='p-4 xl:px-54 2xl:px-96 pt-32 lg:pt-58 pb-24 bg-blue-50'>
         <h2 className="font-bold text-2xl xl:text-4xl">Profil Kelurahan</h2>
         <div className="flex items-center flex-row gap-2 mt-4 xl:text-base text-xs">
@@ -60,14 +61,15 @@ const About = () => {
         <div className="mt-8 xl:mt-12">
           <h2 className="text-xl xl:text-3xl font-bold lg:text-start">Sejarah Kelurahan Rumoong Bawah</h2>
           <div className="mt-4 xl:mt-8 space-y-2">
-            <p className="lg:text-base text-sm leading-loose">Kelurahan Rumoong Bawah merupakan sebuah kelurahan yang terletak di Kecamatan Amurang barat. Kabupaten Minahasa Selatan,Provinsi Sulawesi Utara. Dahulu nama Rumoong dikatakan sebagai Roong, menurut keterangan masyarakat setempat dan tokoh masyarakat terdahulu, “Roong” ini berasal dari sebuah pohon least yang artinya menjadi tempat persinggahan dan mencari tempat tinggal orang-orang dari Minahasa Tengah sehingga dinamakan Roong. “Roong” artinya tempat persinggahan tua-tua. Penduduk minahasa tengah masuk di desa rumoong pada tahun sekitar 1600-an dan banyak penduduk dari daerah-daerah lain yang masuk, menurut keterangan masyarakat setempat dan tokoh masyarakat terdahulu penataan desa rumoong sudah ada pada tahun 1800-an dan penataan batas wilayah di buat oleh orang yang berasal dari jawa yang datang untuk mencari tempat tinggal. Batas-batas wilayah di rumoong ini mudah diketahui karna semua batasnya itu lurus dari atas gunung sampai sungai.</p>
-            <p className="lg:text-base text-sm leading-loose">Dahulu Kelurahan Rumoong Bawah merupakan sebuah desa. Namun dengan adanya perkembangan zaman, terjadi pemekaran dari desa menjadi kelurahan dimana waktu itu kapasitas penduduk dan pemukiman tempat tinggal sudah melebihi batas maximum sehingga sebagian masyarakat menyepakati untuk beralih ke desa. Pada tahun 1981 ditetapkannya Kelurahan Rumoong Bawah.</p>
-            <p className="lg:text-base text-sm leading-loose">Adat istiadat dari Kelurahan Rumoong Bawah dulunya ada yang disebut ‘’Watu Tumotowa’’ tetapi adat istiadat tersebut sudah tidak dilestarikan oleh masyarakat Kelurahan Rumoong Bawah dengan alasan penerus adat istiadat tersebut sudah wafat, sehingga tidak ada penerus. Dan adat istiadat yang masih berlaku juga dilestarikan sampai sekarang di Kelurahan Rumoong Bawah adalah ‘’Mapalus atau Gotong Royong”. Kemudian ada Budaya Pengucapan Syukur tahunan yang masih dilestarikan oleh masyarakat.</p>
-            <p className="lg:text-base text-sm leading-loose">Kelurahan Rumoong Bawah memiliki luas wilayah ± 4.00 Ha, dengan jumlah penduduk Laki-laki 1.097 dan Perempuan 1.077. Jumlah 2.149. Hasil sumber daya alam dari Kelurahan Rumoog Bawah adalah Pertanian seperti “Kopra, Arang Tempurung” dan Perkebunan seperti “Jagung, Nilam, Dll”. Kedua hasil SDA ini sebagai penunjang ekonomi dan menjadi penghasilan utama masyarakat Kelurahan Rumoong Bawah, juga memiliki potensi wisata Air Terjun yang dinamakan ‘’Air Terjun Supawandi’’.</p>
+            <p className="lg:text-base text-sm leading-loose">Kelurahan Rumoong Bawah merupakan sebuah kelurahan yang terletak di Kecamatan Amurang Barat, Kabupaten Minahasa Selatan, Provinsi Sulawesi Utara. Dahulu nama Rumoong dikatakan sebagai Ro-oangan artinya orang yang menyebrang atau rumoyong dari Ranoyapo dan bersinggah di Pohon Lesat yang menjadi tempat persinggahan. Rumoong ini dulunya adalah sebuah desa, akan tetapi terjadi pemekaran dari desa menjadi kelurahan pada tahun 1981. Peristiwa tersebut diputuskan oleh peraturan DPR-RI pada tahun 1981. Adapun batas-batas wilayah di kelurahan  rumoong bawah mudah diketahui karna semua batas wilayahnya lurus dari atas gunung sampai sungai.</p>
+            <p className="lg:text-base text-sm leading-loose">Adat istiadat dari Kelurahan Rumoong Bawah yang ada sejak dulu yaitu ‘’Watu Tumotowa’’ tetapi adat istiadat tersebut sudah tidak dilestarikan. Adat istiadat yang masih   dilestarikan sampai sekarang di Kelurahan Rumoong Bawah adalah “Mapalus atau Gotong Royong”. Kemudian ada juga Budaya Pengucapan Syukur tahunan yang masih dilestarikan oleh masyarakat Minahasa Selatan.</p>
+            <p className="lg:text-base text-sm leading-loose">Siklus kepemimpinan dari kelurahan Rumoong Bawah berubah-ubah dari tahun ke tahun, dimana dulunya pemimpin wilayah disebut TONAAS, kemudian beralih menjadi PERWIS/Pewaris, lalu pada tahun 1898 nama HUKUM TUA digunakan sebagai sebutan Pemimpin Desa. Setelah terjadi pemekaran dari desa beralih menjadi kelurahan, sebutan kepemimpinan  adalah LURAH.</p>
+            <p className="lg:text-base text-sm leading-loose">Kelurahan Rumoong Bawah memiliki luas wilayah ± 4,900 Ha, dengan jumlah penduduk Laki-laki 1.097 dan Perempuan 1.077. Jumlah 2.149. Hasil sumber daya alam dari Kelurahan Rumoog Bawah adalah Pertanian seperti “Kopra dan Arang Tempurung” dan Perkebunan seperti “Rica, Jagung, Nilam, Dll”. Kedua hasil SDA ini sebagai penunjang ekonomi dan menjadi penghasilan utama masyarakat Kelurahan Rumoong Bawah. Kelurahan Rumoong Bawah juga memiliki potensi wisata Air Terjun yang dinamakan ‘’Air Terjun Supawandi’’.</p>
           </div>
         </div>
       </section>
 
+      {/* TABLE PERIODE PEMERINTAH */}
       <section className=' p-4 xl:px-54 2xl:px-96 pb-32 bg-blue-50'>
         <h2 className="text-xl xl:text-3xl font-bold lg:text-start text-center">
           Periode Pemerintahan Hukum Tua / Lurah Kelurahan Rumoong Bawah
