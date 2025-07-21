@@ -4,7 +4,7 @@ import Gallery2 from '@/assets/images/Lingkungan.PNG'
 import Gallery3 from '@/assets/images/sd-negeri-rumoong-bawah.PNG'
 import Gallery4 from '@/assets/images/gereja-gmim.jpg'
 import Gallery5 from '@/assets/images/gereja-kgpm-betlehem.jpg'
-import Gallery6 from '@/assets/images/gereja-gpdi.jpg'
+import Gallery6 from '@/assets/images/pohon-lesat.jpg'
 
 // Icons
 import { FaArrowRight } from 'react-icons/fa6'
@@ -42,7 +42,7 @@ const galery = [
     {
         id: 6,
         image: Gallery6,
-        name: 'Gereja GPdI Solideo City of God',
+        name: 'Pohon Lesat',
     },
 ]
 

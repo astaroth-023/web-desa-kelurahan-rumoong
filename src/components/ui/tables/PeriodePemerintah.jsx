@@ -1,7 +1,7 @@
 const data = [
     { no: 1, nama: 'Mamarimbing', jabatan: 'Tonaas', tahun: '1478' },
     { no: 2, nama: 'Kumendong', jabatan: 'Tonaas', tahun: '1646' },
-    { no: 3, nama: 'Loket', jabatan: 'Tonaas', tahun: '1724' },
+    { no: 3, nama: 'Lokey', jabatan: 'Tonaas', tahun: '1724' },
     { no: 4, nama: 'J. Rumengan', jabatan: 'Perwis Sendangan', tahun: '1856' },
     { no: 5, nama: 'J. Tamburian', jabatan: 'Perwis Talikuran', tahun: '1856' },
     { no: 6, nama: 'J.J. Tumbelaka', jabatan: 'Hukum Tua', tahun: '1898-1920' },

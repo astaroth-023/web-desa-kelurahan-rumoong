@@ -26,9 +26,10 @@ const Prestasi = () => {
                     <div>
                         <ul className="space-y-4 text-justify">
                             <p className="text-sm lg:text-lg">- Terbaik II perlombaan Kelurahan tingkat Kabupaten Minahasa Selatan Tahun 2011</p>
-                            <p className="text-sm lg:text-lg">- Juara II Perlombaan Kelurahan Tingkat Provinsi Sulawesi Utara Kelurahan Rumoong Bawah Kecamatan Amurang Barat Kabupaten Minahasa Selatan Tahun 2015</p>
+                            <p className="text-sm lg:text-lg">- Juara II Perlombaan Kelurahan Tingkat Nasional Kelurahan Rumoong Bawah Kecamatan Amurang Barat Kabupaten Minahasa Selatan Tahun 2015</p>
                             <p className="text-sm lg:text-lg">- Trophy Bergilir Karang Taruna Lestari Rumoong Bawah Kecamatan Tombasian dari Prof. Dr. R. O. Kandouw</p>
                             <p className="text-sm lg:text-lg">- Juara II Lomba Kelurahan TKT. Kabupaten Minahasa Selata Tahun 2008</p>
+                            <p className="text-sm lg:text-lg">- Banyak Menjuarai Perlombaan Musik Bambu Klarinet</p>
                         </ul>
                     </div>
                     </div>
